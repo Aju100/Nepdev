@@ -1,0 +1,9 @@
+import os
+
+PROJECT_NAME = ""
+
+SQLCHEMY_DATABASE_URL = os.environ['SQLACHMEY_DATABASE_URL']
+
+API_V1_STR = "/api/v1"
+
+

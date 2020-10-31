@@ -1,5 +1,5 @@
-from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
-from .database import Base
+from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, ARRAY
+from .session import Base
 
 class NepaliDev(Base):
     __tablename__ = "NepaliDev"
@@ -10,7 +10,7 @@ class NepaliDev(Base):
     address= Column(String(30)),
     experience = Column(Integer),
     previous_companies = Column(ARRAY(String)),
-    is_intern =  Column(Array(String)),
+    is_intern =  Column(Array(String),default=False),
     blog_url = Column(String),
     github_url = Column(String),
     linkedln_url = Column(String),
